@@ -1,0 +1,2 @@
+ - Audio recorder which records audio clips for English words for pronunciation purposes.
+ - It also has ability to rate audio recording for different accents.
