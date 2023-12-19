@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="10dp"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText"
+    tools:context=".MainFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Let's fix your \n (American English) accent."
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Listen and Practice"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/button_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/btn_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#9B5BC1"
+            android:text="App"
+            android:tag="Noun"/>
+
+        <Button
+            android:id="@+id/btn_accompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/btn_app"
+            android:backgroundTint="#9B5BC1"
+            android:text="Accompany"
+            android:tag="Verb"/>
+
+        <Button
+            android:id="@+id/btn_acknowledge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/btn_accompany"
+            android:backgroundTint="#9B5BC1"
+            android:text="acknowledge"
+            android:tag="Verb"/>
+
+        <Button
+            android:id="@+id/btn_administration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_app"
+            android:backgroundTint="#9B5BC1"
+            android:text="administration"
+            android:tag="Noun"/>
+
+        <Button
+            android:id="@+id/btn_appointment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_app"
+            android:layout_toEndOf="@id/btn_administration"
+            android:backgroundTint="#9B5BC1"
+            android:text="appointment"
+            android:tag="Noun"/>
+
+        <Button
+            android:id="@+id/btn_approval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_app"
+            android:layout_toEndOf="@id/btn_appointment"
+            android:backgroundTint="#9B5BC1"
+            android:text="approval"
+            android:tag="Noun"/>
+
+        <Button
+            android:id="@+id/btn_atmosphere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_administration"
+            android:backgroundTint="#9B5BC1"
+            android:text="atmosphere"
+            android:tag="Noun"/>
+
+        <Button
+            android:id="@+id/btn_it_is_completed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_administration"
+            android:layout_toEndOf="@id/btn_atmosphere"
+            android:backgroundTint="#9B5BC1"
+            android:text="it is completed"
+            android:tag="Verb"/>
+
+        <Button
+            android:id="@+id/btn_championship"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_approval"
+            android:layout_toEndOf="@id/btn_it_is_completed"
+            android:backgroundTint="#9B5BC1"
+            android:text="championship"
+            android:tag="Noun"/>
+
+        <Button
+            android:id="@+id/consider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_atmosphere"
+            android:backgroundTint="#9B5BC1"
+            android:text="consider"
+            android:tag="Verb"/>
+
+        <Button
+            android:id="@+id/evident"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_atmosphere"
+            android:layout_toRightOf="@id/consider"
+            android:backgroundTint="#9B5BC1"
+            android:text="evident"
+            android:tag="Noun"/>
+
+        <Button
+            android:id="@+id/commission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_atmosphere"
+            android:layout_toRightOf="@id/evident"
+            android:backgroundTint="#9B5BC1"
+            android:text="this is commission"
+            android:tag="Noun"/>
+
+        <Button
+            android:id="@+id/concern"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/consider"
+            android:backgroundTint="#9B5BC1"
+            android:text="concern"
+            android:tag="Noun"/>
+
+        <Button
+            android:id="@+id/commit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/consider"
+            android:layout_toRightOf="@id/concern"
+            android:backgroundTint="#9B5BC1"
+            android:text="commit the files"
+            android:tag="Verb"/>
+
+        <Button
+            android:id="@+id/approach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/consider"
+            android:layout_toRightOf="@id/commit"
+            android:backgroundTint="#9B5BC1"
+            android:text="approach"
+            android:tag="Verb"/>
+
+        <Button
+            android:id="@+id/establish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/concern"
+            android:backgroundTint="#9B5BC1"
+            android:text="establishing"
+            android:tag="Verb"/>
+
+        <Button
+            android:id="@+id/conduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/concern"
+            android:layout_toRightOf="@id/establish"
+            android:backgroundTint="#9B5BC1"
+            android:text="conduct"
+            android:tag="Verb"/>
+
+        <Button
+            android:id="@+id/engage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/concern"
+            android:layout_toRightOf="@id/conduct"
+            android:backgroundTint="#9B5BC1"
+            android:text="engage"
+            android:tag="Verb"/>
+
+        <Button
+            android:id="@+id/merit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="merit"
+            android:backgroundTint="#9B5BC1"
+            android:layout_below="@id/concern"
+            android:layout_toRightOf="@id/engage"
+            android:tag="Noun" />
+
+        <Button
+            android:id="@+id/circumstances"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="circumstances"
+            android:backgroundTint="#9B5BC1"
+            android:layout_below="@id/establish"
+            android:tag="Noun"/>
+
+        <Button
+            android:id="@+id/convention"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="convention"
+            android:backgroundTint="#9B5BC1"
+            android:layout_below="@id/conduct"
+            android:layout_toRightOf="@id/circumstances"
+            android:tag="Noun"/>
+
+        <Button
+            android:id="@+id/inspire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="inspire"
+            android:backgroundTint="#9B5BC1"
+            android:layout_below="@id/establish"
+            android:layout_toRightOf="@id/convention"
+            android:tag="Verb"/>
+
+        <Button
+            android:id="@+id/reflect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="reflect"
+            android:backgroundTint="#9B5BC1"
+            android:layout_below="@id/circumstances"
+            android:tag="Verb"/>
+
+        <Button
+            android:id="@+id/territory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="territory"
+            android:backgroundTint="#9B5BC1"
+            android:layout_below="@id/circumstances"
+            android:layout_toRightOf="@id/reflect"
+            android:tag="Noun"/>
+
+        <Button
+            android:id="@+id/undertake"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="undertake"
+            android:backgroundTint="#9B5BC1"
+            android:layout_below="@id/circumstances"
+            android:layout_toRightOf="@id/territory"
+            android:tag="Verb"/>
+
+        <Button
+            android:id="@+id/crew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="crew"
+            android:backgroundTint="#9B5BC1"
+            android:layout_below="@id/circumstances"
+            android:layout_toRightOf="@id/undertake"
+            android:tag="Noun"/>
+
+        <Button
+            android:id="@+id/chamber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="chamber"
+            android:backgroundTint="#9B5BC1"
+            android:layout_below="@id/reflect"
+            android:tag="Noun"/>
+
+        <Button
+            android:id="@+id/scheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="scheme"
+            android:backgroundTint="#9B5BC1"
+            android:layout_below="@id/reflect"
+            android:layout_toRightOf="@id/chamber"
+            android:tag="Noun"/>
+
+        <Button
+            android:id="@+id/justify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="justify"
+            android:backgroundTint="#9B5BC1"
+            android:layout_below="@id/reflect"
+            android:layout_toRightOf="@id/scheme"
+            android:tag="Verb"/>
+
+        <Button
+            android:id="@+id/flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="flag"
+            android:backgroundTint="#9B5BC1"
+            android:layout_below="@id/reflect"
+            android:layout_toRightOf="@id/justify"
+            android:tag="Noun"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

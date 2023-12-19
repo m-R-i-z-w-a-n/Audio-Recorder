@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_gradient"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/img_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/baseline_close_24" />
+
+    <LinearLayout
+        android:id="@+id/word_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_close"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="chocolate"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/play"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:src="@drawable/baseline_play_arrow_24_green" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/record_stop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/word_title"
+        android:layout_marginTop="50dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/record"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="#915ECA"
+            android:foregroundGravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/play_stop"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/textView_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="23dp"
+                android:text="Record"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/imageView_record"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginEnd="48dp"
+                android:src="@drawable/baseline_circle_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_record" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/play_stop"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_toEndOf="@id/record"
+            android:background="#8C5BC9"
+            android:foregroundGravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/record">
+
+            <TextView
+                android:id="@+id/textView_play_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="23dp"
+                android:text="Play"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/imageView_play_stop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView_play_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginEnd="48dp"
+                android:src="@drawable/baseline_play_arrow_24_black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_play_stop" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <me.jagar.chatvoiceplayerlibrary.VoicePlayerView
+        android:id="@+id/player_visualizer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/record_stop"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        app:enableVisualizer="true"
+        app:playPauseBackgroundColor="#00000000"
+        app:shareBackgroundColor="#00000000"
+        app:showShareButton="false"
+        app:viewBackground="#00000000"
+        app:visualizationPlayedColor="@color/visualizer" />
+
+    <com.visualizer.amplitude.AudioRecordView
+        android:id="@+id/recorder_visualizer"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/player_visualizer"
+        app:chunkAlignTo="center"
+        app:chunkColor="@color/visualizer"
+        app:chunkMaxHeight="60dp"
+        app:chunkMinHeight="5dp"
+        app:chunkRoundedCorners="false"
+        app:chunkSoftTransition="true"
+        app:chunkSpace="3dp"
+        app:chunkWidth="1dp"
+        app:direction="rightToLeft" />
+
+    <ImageView
+        android:id="@+id/img_mic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recorder_visualizer"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/baseline_mic_24" />
+
+</RelativeLayout>
